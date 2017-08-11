@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+
+  "name": "云币小贴心",
+  "description": "云币贴心小助手,帮你避免尴尬",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "jquery-3.2.1.min.js",
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+        "matches": [
+        "*://yunbi.com/*",
+        "*://baidu.com/*"
+    ],
+      "css": ["helper.css"],
+      "js": ["jquery-3.2.1.min.js","helper.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "https://yunbi.com/",
+    "https://baidu.com/",
+    "*://*.baidu.com/*" 
+  ]
+}
