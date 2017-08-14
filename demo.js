@@ -1,1 +1,0 @@
-alert(window.localStorage['BASE64_BOTTAG'])

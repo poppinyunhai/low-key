@@ -18,18 +18,19 @@
   "content_scripts": [
     {
         "matches": [
-        "*://yunbi.com/*",
-        "*://baidu.com/*"
+        "*://yunbi.com/*"
     ],
       "css": ["helper.css"],
-      "js": ["jquery-3.2.1.min.js","helper.js"],
-      "run_at": "document_start"
+      "js": ["jquery-3.2.1.min.js","helper.js", "content.js"],
+      "run_at": "document_start",
+      "all_frames": false
     }
   ],
   "permissions": [
     "activeTab",
-    "https://yunbi.com/",
-    "https://baidu.com/",
-    "*://*.baidu.com/*" 
-  ]
+    "*://*.yunbi.com/*"
+  ],
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" }
 }
